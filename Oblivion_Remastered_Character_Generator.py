@@ -301,7 +301,7 @@ Summoner=CharClass()
 Summoner.name="Summoner (Custom Class!)"
 Summoner.class_specialization="Stealth"
 Summoner.favored_attributes=["Agility","Intelligence"]
-Summoner.major_skills=["Marksman","Conjurer","Sneak","Alchemy","heavy-or-light-armor","Restoration","Security"]
+Summoner.major_skills=["Marksman","Conjuration","Sneak","Alchemy","heavy-or-light-armor","Restoration","Security"]
 
 
 normal_classes=[Warrior,Barbarian,Crusader,Knight,Archer,Scout,Rogue,Mage,Sorcerer,Battlemage,Healer,Spellsword,Witchhunter,Nightblade,Thief,Agent,Acrobat,Assassin,Monk,Pilgrim,Bard]
