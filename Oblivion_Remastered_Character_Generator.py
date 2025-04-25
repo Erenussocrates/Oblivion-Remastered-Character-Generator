@@ -103,6 +103,7 @@ Snooping = False
 Lockpick = False
 Persuasion = False
 Scroll = False
+Haggle = False
 
 questlines = [
     "Main Questline", "Arena", "Dark Brotherhood", "Fighters Guild",
@@ -512,6 +513,9 @@ if "Alchemy" in random_class.major_skills:
 if "Speechcraft" in random_class.major_skills:
     Persuasion = True
 
+if "Mercantile" in random_class.major_skills:
+    Haggle = True
+
 # === HORSE LOGIC ===
 if "Athletics" in random_class.major_skills:
     Horse = False
@@ -577,7 +581,7 @@ else:
 if Lockpick:
     output_lines.append("Your character IS allowed to use Lockpicks!")
 else:
-    output_lines.append("Your character is NOT allowed to use Lockpicks!")
+    output_lines.append("Your character is NOT allowed to use Lockpicks! But you can still use auto-attempt.")
     
 if Repair:
     output_lines.append("Your character IS allowed to use Repair Hammers!")
@@ -593,6 +597,11 @@ if Persuasion:
     output_lines.append("Your character IS allowed to use the Persuasion minigame!")
 else:
     output_lines.append("Your character is NOT allowed to use the Persuasion minigame! But you can still bribe people.")
+
+if Haggle:
+    output_lines.append("Your character IS allowed to haggle!")
+else:
+    output_lines.append("Your character is NOT allowed to haggle!")
 
 if Horse:
     output_lines.append("Your character IS allowed to ride a horse!")
