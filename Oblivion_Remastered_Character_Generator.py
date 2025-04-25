@@ -102,6 +102,7 @@ Repair = False
 Snooping = False
 Lockpick = False
 Persuasion = False
+Scroll = False
 
 questlines = [
     "Main Questline", "Arena", "Dark Brotherhood", "Fighters Guild",
@@ -527,8 +528,10 @@ if in_mages_guild:
     Staves = True
 elif has_magic_skills:
     Staves = random.choice([True, False])
+    Scroll = random.choice([True, False])
 else:
     Staves = False
+    Scroll = False
     
 # === LUCKY DRAW ===
 Lucky_Draw = random.random() < 0.01
@@ -600,6 +603,11 @@ if Staves:
     output_lines.append("Your character IS allowed to use staves!")
 else:
     output_lines.append("Your character is NOT allowed to use staves!")
+    
+if Scroll:
+    output_lines.append("Your character IS allowed to use scrolls!")
+else:
+    output_lines.append("Your character is NOT allowed to use scrolls!")
 
 # Join everything and print
 full_output = "\n".join(output_lines)
