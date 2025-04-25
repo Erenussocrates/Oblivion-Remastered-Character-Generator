@@ -101,6 +101,7 @@ Potions = False
 Repair = False
 Snooping = False
 Lockpick = False
+Persuasion = False
 
 questlines = [
     "Main Questline", "Arena", "Dark Brotherhood", "Fighters Guild",
@@ -506,6 +507,9 @@ if "Armorer" in random_class.major_skills:
     
 if "Alchemy" in random_class.major_skills:
     Potions = True
+    
+if "Speechcraft" in random_class.major_skills:
+    Persuasion = True
 
 # === HORSE LOGIC ===
 if "Athletics" in random_class.major_skills:
@@ -581,6 +585,11 @@ if Potions:
     output_lines.append("Your character IS allowed to use Mortar and Pestle!")
 else:
     output_lines.append("Your character is NOT allowed to use Mortar and Pestle!")
+
+if Persuasion:
+    output_lines.append("Your character IS allowed to use the Persuasion minigame!")
+else:
+    output_lines.append("Your character is NOT allowed to use the Persuasion minigame! But you can still bribe people.")
 
 if Horse:
     output_lines.append("Your character IS allowed to ride a horse!")
